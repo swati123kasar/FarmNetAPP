@@ -224,7 +224,7 @@ app.get('/login',(req,res)=>{
     if(req.session.user){
         var user = req.session.user;
         console.log(user);
-		post.find({type:'Innovation'},(err, data)=> {
+		post.find({type:'Query'},(err, data)=> {
             if(data)
             {console.log(data);
             res.render('expert/index',{post:data,farmer:user});}
